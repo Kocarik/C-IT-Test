@@ -10,100 +10,149 @@ using System.Windows.Forms;
 
 namespace IT___Test
 {
+    
     public partial class Form1 : Form
     {
+
+        int p;
+
         public Form1()
         {
             InitializeComponent();
+       
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        public void firstQuestion()
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        { String str1 = "arpanet";
-            if(textBox1.Text.ToLower().Trim() == str1)
+            String str1 = "arpanet";
+            if (textBox1.Text.ToLower().Trim().Equals(str1))
             {
                 lbl1OK.Text = "OK";
+                lbl1OK.ForeColor = Color.Green;
+                p += 1;
             }
 
             else
             {
                 lbl1OK.Text = "EROR";
+                lbl1OK.ForeColor = Color.Red;
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {    
-
-            if(radioButton1.Checked == false)
+        public void secondQuestion()
+        {
+            if (radioButton1.Checked == true)
             {
                 lbl2OK.Text = "OK";
+                lbl2OK.ForeColor = Color.Green;
+                p += 1;
             }
 
             else
             {
                 lbl2OK.Text = "EROR";
+                lbl2OK.ForeColor = Color.Red;
             }
         }
-       
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        public void threeQuestion()
         {
-            if (checkBox1.Checked == false && checkBox4.Checked == false)
+            if (checkBox1.Checked == true && checkBox4.Checked == true)
             {
                 label3OK.Text = "OK";
+                label3OK.ForeColor = Color.Green;
+                p += 1;
             }
 
             else
             {
                 label3OK.Text = "CHYBA";
+                label3OK.ForeColor = Color.Red;
             }
-           
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        public void fourQuestion()
         {
-            if (radioButton5.Checked == false)
+            if (radioButton5.Checked == true)
             {
                 lbl4OK.Text = "OK";
+                lbl4OK.ForeColor = Color.Green;
+                p += 1;
             }
 
             else
             {
                 lbl4OK.Text = "EROR";
+                lbl4OK.ForeColor = Color.Red;
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void fiveQuestion()
         {
-            if(comboBox1.SelectedItem == "Hviezdicova")
+            if (comboBox1.SelectedItem == "Hviezdicova")
             {
                 lbl5OK.Text = "OK";
+                lbl5OK.ForeColor = Color.Green;
+                p += 1;
 
             }
 
             else
             {
                 lbl5OK.Text = "EROR";
+                lbl5OK.ForeColor = Color.Red;
             }
         }
 
-        
-        public void kontrolaDatumu()
+        public void sixQuestion()
         {
-            string datum = dateTimePicker1.Value.ToShortDateString();
+            string datum = datePicker.Value.ToShortDateString();
 
             if (datum == "01.01.1970")
             {
-                lbl6OK.Text = "OK";
+                lbl6OK.Text = "OK :)";
+                lbl6OK.ForeColor = Color.Green;
+                p += 1;
             }
 
-            else {
-                lbl6OK.Text = "OK";
+            else
+            {
+                lbl6OK.Text = "Nespravna odpoved";
+                lbl6OK.ForeColor = Color.Red;
             }
         }
+
+        public void pointCount()
+        {
+            lblPoint.Text = "Nazberal si celkom " +p+ " bodov.";          
+        }
+
+        private void btnKontrola_Click(object sender, EventArgs e)
+        {
+            firstQuestion();
+            secondQuestion();
+            threeQuestion();
+            fourQuestion();
+            fiveQuestion();
+            sixQuestion();
+            pointCount();
+            p = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            p = 0;
+            lblPoint.Text = "Nazberal si celkom " + p + " bodov.";
+            lbl1OK.Text = null;
+            lbl2OK.Text = null;
+            label3OK.Text = null;
+            lbl4OK.Text = null;
+            lbl5OK.Text = null;
+            lbl6OK.Text = null;
+        }
+
+
     }
+
 }

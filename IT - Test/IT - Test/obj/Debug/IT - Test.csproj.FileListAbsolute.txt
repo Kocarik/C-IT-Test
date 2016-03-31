@@ -1,9 +1,9 @@
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\bin\Debug\IT - Test.exe.config
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\bin\Debug\IT - Test.exe
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\bin\Debug\IT - Test.pdb
-D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT - Test.csprojResolveAssemblyReference.cache
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT___Test.Form1.resources
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT___Test.Properties.Resources.resources
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT - Test.csproj.GenerateResource.Cache
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT - Test.exe
 D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT - Test.pdb
+D:\Milo Notebok Lenovo\Visual Studio Projekty\IT - Test\IT - Test\obj\Debug\IT - Test.csprojResolveAssemblyReference.cache

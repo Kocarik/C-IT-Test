@@ -50,10 +50,13 @@
             this.lbl4OK = new System.Windows.Forms.Label();
             this.lbl5OK = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbl6OK = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3OK = new System.Windows.Forms.Label();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.lblPoint = new System.Windows.Forms.Label();
+            this.btnKontrola = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,7 +79,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox1
             // 
@@ -90,7 +92,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "2. Ktory protokol pracuje na  transortnej vrstve ?";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton3
             // 
@@ -177,7 +178,6 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "4. Na ktorej vrstve pracuje Switch?";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // radioButton4
             // 
@@ -236,25 +236,24 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.Text = "Vyber moznost";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lbl1OK
             // 
             this.lbl1OK.AutoSize = true;
+            this.lbl1OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl1OK.Location = new System.Drawing.Point(360, 36);
             this.lbl1OK.Name = "lbl1OK";
-            this.lbl1OK.Size = new System.Drawing.Size(38, 13);
+            this.lbl1OK.Size = new System.Drawing.Size(0, 24);
             this.lbl1OK.TabIndex = 12;
-            this.lbl1OK.Text = "EROR";
             // 
             // lbl2OK
             // 
             this.lbl2OK.AutoSize = true;
+            this.lbl2OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl2OK.Location = new System.Drawing.Point(534, 124);
             this.lbl2OK.Name = "lbl2OK";
-            this.lbl2OK.Size = new System.Drawing.Size(38, 13);
+            this.lbl2OK.Size = new System.Drawing.Size(0, 24);
             this.lbl2OK.TabIndex = 13;
-            this.lbl2OK.Text = "EROR";
             // 
             // lbl3OK
             // 
@@ -268,20 +267,20 @@
             // lbl4OK
             // 
             this.lbl4OK.AutoSize = true;
+            this.lbl4OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl4OK.Location = new System.Drawing.Point(534, 325);
             this.lbl4OK.Name = "lbl4OK";
-            this.lbl4OK.Size = new System.Drawing.Size(38, 13);
+            this.lbl4OK.Size = new System.Drawing.Size(0, 24);
             this.lbl4OK.TabIndex = 15;
-            this.lbl4OK.Text = "EROR";
             // 
             // lbl5OK
             // 
             this.lbl5OK.AutoSize = true;
+            this.lbl5OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl5OK.Location = new System.Drawing.Point(534, 403);
             this.lbl5OK.Name = "lbl5OK";
-            this.lbl5OK.Size = new System.Drawing.Size(38, 13);
+            this.lbl5OK.Size = new System.Drawing.Size(0, 24);
             this.lbl5OK.TabIndex = 16;
-            this.lbl5OK.Text = "EROR";
             // 
             // label4
             // 
@@ -294,22 +293,14 @@
             this.label4.Text = "6. Od akeho datumu sa datuje cas v PC?";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(391, 449);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 18;
-            // 
             // lbl6OK
             // 
             this.lbl6OK.AutoSize = true;
+            this.lbl6OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl6OK.Location = new System.Drawing.Point(615, 453);
             this.lbl6OK.Name = "lbl6OK";
-            this.lbl6OK.Size = new System.Drawing.Size(38, 13);
+            this.lbl6OK.Size = new System.Drawing.Size(0, 24);
             this.lbl6OK.TabIndex = 19;
-            this.lbl6OK.Text = "EROR";
             // 
             // groupBox3
             // 
@@ -324,26 +315,73 @@
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "4. Ktora IP Adresa je spravna?";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label3OK
             // 
             this.label3OK.AutoSize = true;
+            this.label3OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3OK.Location = new System.Drawing.Point(650, 217);
             this.label3OK.Name = "label3OK";
-            this.label3OK.Size = new System.Drawing.Size(38, 13);
+            this.label3OK.Size = new System.Drawing.Size(0, 24);
             this.label3OK.TabIndex = 21;
-            this.label3OK.Text = "EROR";
+            // 
+            // datePicker
+            // 
+            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePicker.Location = new System.Drawing.Point(391, 453);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(200, 20);
+            this.datePicker.TabIndex = 22;
+            // 
+            // lblPoint
+            // 
+            this.lblPoint.AutoSize = true;
+            this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPoint.Location = new System.Drawing.Point(30, 497);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(0, 20);
+            this.lblPoint.TabIndex = 23;
+            // 
+            // btnKontrola
+            // 
+            this.btnKontrola.BackColor = System.Drawing.Color.Lime;
+            this.btnKontrola.FlatAppearance.BorderSize = 0;
+            this.btnKontrola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKontrola.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnKontrola.Location = new System.Drawing.Point(675, 20);
+            this.btnKontrola.Name = "btnKontrola";
+            this.btnKontrola.Size = new System.Drawing.Size(174, 61);
+            this.btnKontrola.TabIndex = 24;
+            this.btnKontrola.Text = "SKONTROLUJ";
+            this.btnKontrola.UseVisualStyleBackColor = false;
+            this.btnKontrola.Click += new System.EventHandler(this.btnKontrola_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("MicroSquare", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(694, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 45);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "RESET";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 514);
+            this.ClientSize = new System.Drawing.Size(870, 528);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnKontrola);
+            this.Controls.Add(this.lblPoint);
+            this.Controls.Add(this.datePicker);
             this.Controls.Add(this.label3OK);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.lbl6OK);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl5OK);
             this.Controls.Add(this.lbl4OK);
@@ -358,7 +396,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "IT Test";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -394,10 +431,13 @@
         private System.Windows.Forms.Label lbl4OK;
         private System.Windows.Forms.Label lbl5OK;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbl6OK;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3OK;
+        private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.Label lblPoint;
+        private System.Windows.Forms.Button btnKontrola;
+        private System.Windows.Forms.Button button1;
     }
 }
 
